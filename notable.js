@@ -13,9 +13,9 @@ const args = process.argv.slice(2);
 const notesDir = `${process.env.HOME}/.notable`;
 const location = `${notesDir}/${process.cwd().replace(/\//g, '-')}`;
 
-if (args.join(' ') == 'clear all') {
+if (args.join(' ') === 'clear all') {
   removeFiles(notesDir);
-} else if (args[0] == 'clear') {
+} else if (args[0] === 'clear') {
   removeFile(location);
   console.log('note removed')
 } else if (args.length > 0) {
